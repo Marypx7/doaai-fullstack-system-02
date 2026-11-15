@@ -1,0 +1,40 @@
+# Dependencies and generated output
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
+
+# Local environment files; keep sanitized examples
+**/.env
+**/.env.*
+!**/.env.example
+
+# Credentials and private keys
+**/credentials/
+**/secrets/
+**/credentials.json
+**/credentials.*.json
+**/client_secret*.json
+**/service-account*.json
+**/serviceAccount*.json
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/.npmrc
+
+# Local uploads, logs, temporary files and caches
+/backend/uploads/
+**/*.log
+**/logs/
+**/tmp/
+**/temp/
+**/*.tmp
+**/*.temp
+**/.cache/
+**/.vite/
+**/.eslintcache
+**/*.tsbuildinfo
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,78 @@
+.social-callback-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: var(--color-surface);
+}
+
+.social-callback {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  width: min(100% - 2rem, 42rem);
+  margin-inline: auto;
+  padding-block: 3rem;
+}
+
+.social-callback__panel {
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  gap: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.social-callback__panel h1,
+.social-callback__panel p {
+  margin: 0;
+}
+
+.social-callback__panel h1 {
+  color: var(--color-brand);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.social-callback__panel p {
+  max-width: 34rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.social-callback__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.social-callback__spinner {
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: social-callback-spin 700ms linear infinite;
+}
+
+@keyframes social-callback-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+  .social-callback__actions,
+  .social-callback__actions .button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-callback__spinner {
+    animation-duration: 0.01ms;
+  }
+}
